@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3" />
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7/css/framework7.bundle.min.css"/>
+    <!-- Custom CSS files -->
+    <link rel="stylesheet" href="css/my-app.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <div class="panel panel-left panel-reveal">
+        <div class="block">
+          <p>Left Panel content here</p>
+          <p><a class="panel-close" href="#">Close me</a></p>
+          <p>
+            <a class="panel-open" href="#" data-panel="right"
+              >Open Right Panel</a
+            >
+          </p>
+        </div>
+      </div>
+      <!-- Statusbar overlay -->
+      <div class="statusbar"></div>
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
+          <!-- Top Navbar -->
+          <div class="page">
+            <div class="page-content">
+              <!-- Static Navbar -->
+              <div class="navbar">
+                <div class="navbar-inner">
+                  <div class="left">
+                    <img src="img/logo.png" alt="" />
+                  </div>
+                  <div class="right">
+                        <a class="panel-open" href="#"><img width="30" src="img/menu.svg" alt=""></a>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                    <div class="col-100 tablet-50"><h1 class="heading primary">CAMP2019:
+                            Mountain Climbing
+                            is coming to Davao! </h1>
+                        
+                            <h3 class="subtitle primary">And, you are invited.</h3></div>
+                    <div class="col-100 tablet-50">
+                            <img src="img/landing2.png" width="100%" alt=""></div>
+              </div>
+                <div class="block paragraph">
+                    
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Itaque quos asperiores ut, odio numquam ab, qui, alias
+                    adipisci in magni reiciendis reprehenderit. Labore esse quae
+                    ut tempore consequatur, reprehenderit similique!
+                    </p>
+                    ...
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script
+      type="text/javascript"
+      src="lib/framework7/js/framework7.bundle.min.js"
+    ></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+/* TEXT */
+.heading{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size:  4.798761609907121vh;
+}
+.subtitle{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size:  2.7863777089783284vh;
+}
+.subheading{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.875em;
+}
+.paragraph{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.875em;
+}
+
+/* COLORS */
+.primary{
+    color:#293359;
+}
+.accent{
+    color: #0FD991;
+}
+.grey{
+    color: #AEB3B9;
+}
