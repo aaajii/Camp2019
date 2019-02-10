@@ -1,8 +1,9 @@
 /* registration.html custom css */
 
-:root{
-    --f7-theme-color:#0FD991!important;
-    --f7-theme-color-rgb: 15, 217, 145 !important;
-    --f7-theme-color-shade: #0FD991 !important; 
-    --f7-theme-color-tint:#0FD991 !important;
+/* BUTTON CASE:SUBMIT */
+.text-transform-initial{
+    text-transform: initial;
+}
+.btn{
+    height: 40px !important;
 }

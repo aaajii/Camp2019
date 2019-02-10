@@ -40,7 +40,6 @@
       <!-- Statusbar overlay -->
       <div class="statusbar"></div>
 
-      <!-- Your main view, should have "view-main" class -->
       <div class="view view-main">
         <!-- Initial Page, "data-name" contains page name -->
         <div data-name="home" id="home" class="page">
@@ -49,20 +48,30 @@
             <div class="page-content">
               <!-- Static Navbar -->
               <div class="display-flex padding margin justify-content-space-between align-content-center">
-                <div class="">
-                  <img src="img/logo.png" alt="" />
+                <div id="log">
+                    <img src="img/logo.png" alt="" />
+                </div>  
+                <div id="menu">
+                    <a class="panel-open" href="#"><ion-icon name="menu" class="black large"></ion-icon></a>
                 </div>
-                <div class="">
-                  <a class="panel-open" href="#"><ion-icon name="menu" class="black large"></ion-icon></a>
-                </div>
-              </div>
+            </div>
               <div class="block">
                 <h3 class="subheading primary text-align-center">Registration</h3>
                 <div class="list no-hairlines-md">
                     <ul>
                         <li class="item-content item-input item-input-with-info">
                             <div class="item-inner">
-                                <div class="item-title item-label">First Name<span class="red">*</span></div>
+                                <div class="item-title item-label paragraph label primary">Email<span class="red">*</span></div>
+                                <div class="item-input-wrap">
+                                    <input type="email" required validate>
+                                    <span class="input-clear-button"></span>
+                                    <div class="item-input-info">Required</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item-content item-input item-input-with-info">
+                            <div class="item-inner">
+                                <div class="item-title item-label paragraph label primary">First Name<span class="red">*</span></div>
                                 <div class="item-input-wrap">
                                     <input type="text" required validate>
                                     <span class="input-clear-button"></span>
@@ -72,7 +81,7 @@
                         </li>
                         <li class="item-content item-input item-input-with-info">
                             <div class="item-inner">
-                                <div class="item-title item-label">Last Name<span class="red">*</span></div>
+                                <div class="item-title item-label paragraph label primary">Last Name<span class="red">*</span></div>
                                 <div class="item-input-wrap">
                                     <input type="text" required validate>
                                     <span class="input-clear-button"></span>
@@ -82,53 +91,43 @@
                         </li>
                         <li class="item-content item-input item-input-with-info">
                             <div class="item-inner">
-                                <div class="item-title item-label">Date of Birth<span class="red">*</span></div>
+                                <div class="item-title item-label paragraph label primary">Date of Birth<span class="red">*</span></div>
                                 <div class="item-input-wrap">
                                     <input type="date" value="2014-04-30" placeholder="Please choose..." required validate>
                                 </div>
                             </div>
                         </li>
                         <li class="item-content item-input">
-                            <div class="item-inner">
-                                <div class="item-title item-label">Gender<span class="red">*</span></div>
-                                <div class="margin-vertical display-flex justify-content-space-between">
-                                    <label class="radio"><input type="radio" name="demo-radio-inline" value="Male"><i class="icon-radio"></i></label> Male
-                                    <label class="radio"><input type="radio" name="demo-radio-inline" value="Female"><i class="icon-radio"></i></label> Female
-                                    <label class="radio"><input type="radio" name="demo-radio-inline" value="Prefer Not To Say"><i class="icon-radio"></i></label> Prefer Not To Say
+                                <div class="item-inner">
+                                    <div class="item-title item-label paragraph label primary">Gender<span class="red">*</span></div>
+                                    <div class="margin-vertical display-flex justify-content-space-between">
+                                        <label class="radio"><input type="radio" name="demo-radio-inline" value="Male"><i class="icon-radio"></i></label> <span class="paragraph label primary">Male</span>
+                                        <label class="radio"><input type="radio" name="demo-radio-inline" value="Female"><i class="icon-radio"></i></label> <span class="paragraph label primary">Female</span>
+                                        <label class="radio"><input type="radio" name="demo-radio-inline" value="Prefer Not To Say"><i class="icon-radio"></i></label><span class="paragraph label primary">Prefer not to say</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="item-content item-input item-input-with-info">
-                            <div class="item-inner">
-                                <div class="item-title item-label">E-mail<span class="red">*</span></div>
-                                <div class="item-input-wrap">
-                                    <input type="email" placeholder="Your e-mail" required validate>
-                                    <span class="input-clear-button"></span>
-                                    <div class="item-input-info">Required</div>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
                         <li class="item-content item-input">
                             <div class="item-inner">
-                                <div class="item-title item-label">Phone Number</div>
+                                <div class="item-title item-label paragraph label primary">Phone Number</div>
                                 <div class="item-input-wrap">
-                                    <input type="tel" placeholder="Your phone number">
+                                    <input type="tel">
                                     <span class="input-clear-button"></span>
                                 </div>
                             </div>
                         </li>
                         <li class="item-content item-input">
                             <div class="item-inner">
-                                <div class="item-title item-label">Food Restrictions</div>
+                                <div class="item-title item-label paragraph label primary">Food Restrictions</div>
                                 <div class="item-input-wrap">
-                                    <input type="text" placeholder="Your name">
+                                    <input type="text">
                                     <span class="input-clear-button"></span>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
-                ...
+                <button class="col button button-raised button-fill" type="submit">Submit</button>
               </div>
             </div>
           </div>
