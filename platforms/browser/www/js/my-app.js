@@ -13,11 +13,13 @@ var app = new Framework7({
     // Add default routes
     routes: [
       {
-        path: '/about/',
-        url: 'about.html',
+        path: '/rsvp/',
+        url: 'registration.html',
       },
     ],
     // ... other parameters
   });
   
   var mainView = app.views.create('.view-main');
+  /* Generate CSS variables for red theme color */
+  app.utils.colorThemeCSSProperties('#0FD991');
