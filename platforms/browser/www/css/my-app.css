@@ -2,7 +2,7 @@
 .heading{
     font-family: 'Work Sans', sans-serif;
     font-weight: 700;
-    font-size:  4.798761609907121vh;
+    font-size:  4.643962848297214vh;
 }
 .subtitle{
     font-family: 'Work Sans', sans-serif;
@@ -29,4 +29,21 @@
 }
 .grey{
     color: #AEB3B9;
+}
+.black{
+    color: #000000;
+}
+
+/* LINE HEIGHT */
+.lh-default{
+    line-height: 1.2;
+}
+
+
+/* ICON SIZES */
+.small{
+    font-size: 24px;
+}
+.large{
+    font-size: 40px;
 }

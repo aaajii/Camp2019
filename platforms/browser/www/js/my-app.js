@@ -8,6 +8,7 @@ var app = new Framework7({
     // Enable swipe panel
     panel: {
       swipe: 'left',
+      closeByBackdropClick: true,
     },
     // Add default routes
     routes: [
