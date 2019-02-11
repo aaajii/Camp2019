@@ -60,3 +60,14 @@
 .large{
     font-size: 40px;
 }
+
+/* INDEX.HTML CSS */
+
+.icon-details{
+    display: block;
+}
+
+.icon-details div{
+    display: flex;
+    justify-content: center;
+}
