@@ -2,34 +2,36 @@
 .heading{
     font-family: 'Work Sans', sans-serif;
     font-weight: 700;
-    font-size:  4.643962848297214vh;
+    font-size:  4.643962848297214vh; /* 31px */
 }
 .subtitle{
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
-    font-size:  2.7863777089783284vh;
+    font-size:  2.7863777089783284vh; /* 18px */
 }
 .subheading{
     font-family: 'Work Sans', sans-serif;
     font-weight: 700;
-    font-size: 2.1671826625387vh
+    font-size: 2.1671826625387vh; /* 14px */
 }
 .paragraph{
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
-    font-size: 2.1671826625387vh;
+    font-size: 2.1671826625387vh; /* 14px */
 }
 .btn-text{
     font-family: 'Chivo', sans-serif;
     font-weight: 400;
-    font-size: 2.1671826625387vh;
+    font-size: 2.1671826625387vh; /* 14px */
 }
 .label{
     font-family: 'Work Sans', sans-serif;
     font-weight: 500;
-    font-size: 2.1671826625387vh;
+    font-size: 2.1671826625387vh; /* 14px */
 }
-
+.bold{
+   font-weight: 700;
+}
 
 /* COLORS */
 .primary{
@@ -55,6 +57,9 @@
 .lh-small{
     line-height: 0.7;
 }
+.lh-large{
+    line-height: 2;
+}
 
 /* ICON SIZES */
 .icon-small{
@@ -67,4 +72,25 @@
 /* INDEX.HTML CSS */
 .padding-left-icon{
     padding-left: 50px;
+}
+
+/* FOODLIST.HTML CSS */
+.padding-left-16{
+    padding-left: 16px;
+}
+
+.margin-bottom-8{
+    margin-bottom: 8px;
+}
+
+.margin-lr-16{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+
+/* COMMITTEES CSS */
+.bg-img-1{
+    background-image: url("/www/img/p1.jpg");
+    /* background-color: #cccccc; */
 }
