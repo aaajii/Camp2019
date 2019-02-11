@@ -29,7 +29,9 @@
     font-weight: 500;
     font-size: 2.1671826625387vh;
 }
-
+.bold{
+   font-weight: 700;
+}
 
 /* COLORS */
 .primary{
@@ -70,4 +72,18 @@
 .icon-details div{
     display: flex;
     justify-content: center;
+}
+
+/* FOODLIST.HTML CSS */
+.padding-left-16{
+    padding-left: 16px;
+}
+
+.margin-bottom-8{
+    margin-bottom: 8px;
+}
+
+.margin-lr-16{
+    margin-left: 16px;
+    margin-right: 16px;
 }
