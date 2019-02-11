@@ -72,15 +72,14 @@
 }
 
 /* FOODLIST.HTML CSS */
-.padding-left-16{
-    padding-left: 16px;
+.food-name{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size:  2.7863777089783284vh;
 }
 
-.margin-bottom-8{
-    margin-bottom: 8px;
-}
-
-.margin-lr-16{
-    margin-left: 16px;
-    margin-right: 16px;
+/* SCHEDULE OF ACTIVITIES */
+.button-green{
+    background-color:  #0FD991;
+    color: #fff;
 }
