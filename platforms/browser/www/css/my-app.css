@@ -17,7 +17,17 @@
 .paragraph{
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
-    font-size: 2.1671826625387vh
+    font-size: 2.1671826625387vh;
+}
+.btn-text{
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 2.1671826625387vh;
+}
+.label{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 2.1671826625387vh;
 }
 
 
@@ -49,4 +59,15 @@
 }
 .large{
     font-size: 40px;
+}
+
+/* INDEX.HTML CSS */
+
+.icon-details{
+    display: block;
+}
+
+.icon-details div{
+    display: flex;
+    justify-content: center;
 }
