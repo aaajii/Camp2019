@@ -16,6 +16,14 @@ var app = new Framework7({
         path: '/rsvp/',
         url: 'registration.html',
       },
+      {
+        path: '/food/',
+        url: 'foodlist.html',
+      },
+      {
+        path: '/home/',
+        url: 'index.html',
+      },
     ],
     // ... other parameters
   });
