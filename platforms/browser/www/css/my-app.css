@@ -52,22 +52,19 @@
 .lh-default{
     line-height: 1.2;
 }
+.lh-small{
+    line-height: 0.7;
+}
 
 /* ICON SIZES */
-.small{
-    font-size: 24px;
+.icon-small{
+    font-size: 30px;
 }
-.large{
+.icon-large{
     font-size: 40px;
 }
 
 /* INDEX.HTML CSS */
-
-.icon-details{
-    display: block;
-}
-
-.icon-details div{
-    display: flex;
-    justify-content: center;
+.padding-left-icon{
+    padding-left: 50px;
 }
