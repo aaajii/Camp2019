@@ -25,12 +25,12 @@
         <div class="block">
           <!-- TODO Create routing for panels-->
           <p><a class="panel-close" href="#">Close me</a></p>
-          <p><a href="#home" class="panel-close">Home</a></p>
+          <p><a href="/home/" class="panel-close">Home</a></p>
           <p><a href="#about">About</a></p>
-          <p><a href="#home">Committee Heads</a></p>
-          <p><a href="#home">Schedule of Activities</a></p>
-          <p><a href="#home">Location Map</a></p>
-          <p><a href="#home">Contact Us</a></p>
+          <p><a href="/home/">Committee Heads</a></p>
+          <p><a href="/home/">Schedule of Activities</a></p>
+          <p><a href="/home/">Location Map</a></p>
+          <p><a href="/home/">Contact Us</a></p>
         </div>
       </div>
       <!-- Statusbar overlay -->
@@ -49,7 +49,7 @@
                       <img src="img/logo.png" alt="" />
                   </div>  
                   <div id="menu">
-                      <a class="panel-open" href="#"><ion-icon name="menu" class="black icon-large"></ion-icon></a>
+                      <a class="panel-open" href=""><ion-icon name="menu" class="black icon-large"></ion-icon></a>
                   </div>
               </div>
               <div class="row">
@@ -64,7 +64,7 @@
                         <img src="img/landing2.png" width="100%" alt="">
                     </div>
               </div>
-              <div class="about">
+              <div id="about" class="about">
                 <div class="text-align-center">
                   <h1 class="subheading primary">About</h1>
                 </div>
@@ -125,9 +125,15 @@
       type="text/javascript"
       src="lib/framework7/js/framework7.bundle.min.js"
     ></script>
-    <!-- Path to your app js-->
-    <script type="text/javascript" src="js/my-app.js"></script>
     <!-- Ionicons CDN -->
     <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+      </script>
+    <!-- Wait Function -->
+    <script src="js/jquery.wait.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
   </body>
 </html>
