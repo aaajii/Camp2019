@@ -17,6 +17,8 @@
     <!-- Custom CSS files -->
     <link rel="stylesheet" href="css/my-app.css" />
     <link rel="stylesheet" href="css/fonts.css" />
+    <script src="js/mapbox-gl.js"></script>
+    <link rel="stylesheet" href="css/mapbox-gl.css" />
   </head>
   <body>
     <!-- App root element -->
@@ -58,7 +60,6 @@
                     <div class="padding-horizontal margin-horizontal">
                         <h1 class="heading primary no-margin-bottom lh-default">CAMP2019: <br/> Mountain Climbing is coming to Davao! </h1>
                         <h3 class="subtitle primary">And, you are invited.</h3>
-                        <a href="/rsvp/">RSVP</a> <!-- temporary-->
                     </div>
                 </div>
                 <div class="col-100 tablet-50">
@@ -66,7 +67,7 @@
                 </div>
               </div>
               <!-- ABOUT SECTION -->
-              <div class="about margin-vertical padding-vertical">
+              <section class="about margin-vertical padding-vertical">
                 <div class="text-align-center">
                   <h1 class="subheading primary">About</h1>
                 </div>
@@ -125,11 +126,14 @@
                       </div>
                   </div>
                 </div>
-              </div>
+              </section>
               <img src="img/about.png" width="100%" alt="">
               
               <!-- COMMITTEES SECTION -->
-              <div class="list media-list inset">
+              <section class="list media-list inset  margin-vertical padding-vertical">
+                <div class="text-align-center">
+                  <h1 class="subheading primary">Committees</h1>
+                </div>
                   <ul>
                     <li>
                       <a href="/adobo/" class="item-link item-content">
@@ -192,9 +196,9 @@
                       </a>
                     </li>
                   </ul>
-                </div>
+                </section>
 
-              <div class="schedule_of_activies block">
+              <section class="schedule_of_activies block margin-vertical padding-vertical">
                   <div class="text-align-center">
                       <h1 class="subheading primary">Schedule of Activies</h1>
                     </div>
@@ -255,7 +259,7 @@
                       <div class="col-80">
                           <p class="paragraph">Lunch <a href="/food/" class="accent">(Full Meal List)</a> </p>
                         </div>
-                    </div>
+                    </div>s
 
                     <div class="row">
                       <div class="col-20">
@@ -347,7 +351,13 @@
                       </div>
                     </div>
                   </div>
-              </div>
+                </section>
+              <section class="margin-vertical padding-vertical">
+                <div class="text-align-center">
+                  <h1 class="subheading primary">Location Map</h1>
+                </div>
+                <div id="map" class="margin-top" style="width:100%;"></div>
+              </section>
             </div>
           </div>
         </div>
@@ -360,6 +370,7 @@
     ></script>
     <!-- Path to your app js-->
     <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="js/mapbox.js"></script>
     <!-- Ionicons CDN -->
     <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
   </body>
