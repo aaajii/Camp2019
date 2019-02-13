@@ -1,15 +1,15 @@
 var app = new Framework7({
-    // App root element
-    root: '#app',
-    // App Name
-    name: 'My App',
-    // App id
-    id: 'com.myapp.test',
-    // Enable swipe panel
-    panel: {
-      swipe: 'left',
-      closeByBackdropClick: true,
-    },
+  // App root element
+  root: '#app',
+  // App Name
+  name: 'My App',
+  // App id
+  id: 'com.myapp.test',
+  // Enable swipe panel
+  panel: {
+    swipe: 'left',
+    closeByBackdropClick: true,
+  },
     // Add default routes
     routes: [
       {
@@ -21,13 +21,46 @@ var app = new Framework7({
         url: 'foodlist.html',
       },
       {
-        path: '/home/',
+        path: '/',
         url: 'index.html',
+      },
+      {
+        path: '/submit/',
+        url: 'success.html',
       },
     ],
     // ... other parameters
-  });
+});
+
+var mainView = app.views.create('.view-main');
+/* Generate CSS variables for red theme color */
+app.utils.colorThemeCSSProperties('#0FD991');
+
+// INDEX JS
+
+// handle links with @href started with '#' only
+$(document).on('click', 'a[href^="#"]', function(e) {
+  if(app.views.main.router.currentRoute["route"]["path"] != "/"){
+    app.views.main.router.navigate('/', true);
+  }
+  app.panel.close(true);
+
+  // target element id
+  var id = $(this).attr('href');
   
-  var mainView = app.views.create('.view-main');
-  /* Generate CSS variables for red theme color */
-  app.utils.colorThemeCSSProperties('#0FD991');
+  // target element
+  var $id = $(id);
+  if ($id.length === 0) {
+      return;
+  }
+  
+  // prevent standard hash navigation (avoid blinking in IE)
+  e.preventDefault();
+  
+  // top position relative to the document
+  var pos = $id.offset();
+  
+  console.log(pos);
+  // animated top scrolling
+  $('.page-content').wait(400).animate({scrollTop: pos["top"]});
+});
