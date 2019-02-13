@@ -21,7 +21,7 @@ var app = new Framework7({
         url: 'foodlist.html',
       },
       {
-        path: '/home/',
+        path: '/',
         url: 'index.html',
       },
     ],
@@ -36,6 +36,9 @@ app.utils.colorThemeCSSProperties('#0FD991');
 
 // handle links with @href started with '#' only
 $(document).on('click', 'a[href^="#"]', function(e) {
+  if(app.views.main.router.currentRoute["route"]["path"] != "/"){
+    app.views.main.router.back('/', true);
+  }
   app.panel.close(true);
 
   // target element id
