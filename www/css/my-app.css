@@ -49,6 +49,10 @@
 .red{
     color: #EE350F;
 }
+.white
+{
+    color: #ffffff;
+}
 
 /* LINE HEIGHT */
 .lh-default{
@@ -85,9 +89,6 @@
     margin-left: 16px;
     margin-right: 16px;
 }
-
-/* COMMITTEES CSS */
-
 
 /* SCHEDULE OF ACTIVITIES */
 .button-green{

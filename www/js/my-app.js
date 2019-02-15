@@ -28,6 +28,26 @@ var app = new Framework7({
         path: '/submit/',
         url: 'success.html',
       },
+      {
+        path: '/peter/',
+        url: 'committee1.html',
+      },
+      {
+        path: '/phum/',
+        url: 'committee2.html',
+      },
+      {
+        path: '/jake/',
+        url: 'committee3.html',
+      },
+      {
+        path: '/kara/',
+        url: 'committee4.html',
+      },
+      {
+        path: '/amy/',
+        url: 'committee5.html',
+      },
     ],
     // ... other parameters
 });
