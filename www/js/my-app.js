@@ -48,6 +48,10 @@ var app = new Framework7({
         path: '/amy/',
         url: 'committee5.html',
       },
+      {
+        path: '/devs/',
+        url: 'devs.html',
+      },
     ],
     // ... other parameters
 });
