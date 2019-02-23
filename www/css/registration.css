@@ -1,0 +1,9 @@
+/* registration.html custom css */
+
+/* BUTTON CASE:SUBMIT */
+.text-transform-initial{
+    text-transform: initial;
+}
+.btn{
+    height: 40px !important;
+}

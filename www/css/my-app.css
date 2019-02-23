@@ -2,22 +2,35 @@
 .heading{
     font-family: 'Work Sans', sans-serif;
     font-weight: 700;
-    font-size:  4.798761609907121vh;
+    font-size:  4.643962848297214vh; /* 31px */
 }
 .subtitle{
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
-    font-size:  2.7863777089783284vh;
+    font-size:  2.7863777089783284vh; /* 18px */
 }
 .subheading{
     font-family: 'Work Sans', sans-serif;
     font-weight: 700;
-    font-size: 0.875em;
+    font-size: 2.1671826625387vh; /* 14px */
 }
 .paragraph{
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
-    font-size: 0.875em;
+    font-size: 2.1671826625387vh; /* 14px */
+}
+.btn-text{
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
+    font-size: 2.1671826625387vh; /* 14px */
+}
+.label{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 2.1671826625387vh; /* 14px */
+}
+.bold{
+   font-weight: 700;
 }
 
 /* COLORS */
@@ -29,4 +42,56 @@
 }
 .grey{
     color: #AEB3B9;
+}
+.black{
+    color: #000000;
+}
+.red{
+    color: #EE350F;
+}
+.white
+{
+    color: #ffffff;
+}
+
+/* LINE HEIGHT */
+.lh-default{
+    line-height: 1.2;
+}
+.lh-small{
+    line-height: 0.7;
+}
+.lh-large{
+    line-height: 2;
+}
+
+/* ICON SIZES */
+.icon-small{
+    font-size: 30px;
+}
+.icon-large{
+    font-size: 40px;
+}
+
+/* INDEX.HTML CSS */
+.padding-left-icon{
+    padding-left: 50px;
+}
+
+/* FOODLIST.HTML CSS */
+.food-name{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size:  2.7863777089783284vh;
+}
+
+.margin-lr-16{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+/* SCHEDULE OF ACTIVITIES */
+.button-green{
+    background-color:  #0FD991;
+    color: #fff;
 }

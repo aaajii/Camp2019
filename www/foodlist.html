@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#0FD991" />
+    <!-- Your app title -->
+    <title>Food List</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7/css/framework7.bundle.min.css"/>
+    <!-- Custom CSS files -->
+    <link rel="stylesheet" href="css/my-app.css" />
+    <link rel="stylesheet" href="css/foodlist.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <div class="panel panel-left panel-reveal">
+        <div class="block">
+          <!-- TODO Create routing for panels-->
+          <p><a class="panel-close" href="#">Close me</a></p>
+          <p><a href="#home" class="panel-close">Home</a></p>
+          <p><a href="#about">About</a></p>
+          <p><a href="#home">Committee Heads</a></p>
+          <p><a href="#home">Schedule of Activities</a></p>
+          <p><a href="#home">Location Map</a></p>
+          <p><a href="#home">Contact Us</a></p>
+        </div>
+      </div>
+      <!-- Statusbar overlay -->
+      <div class="statusbar"></div>
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
+          <div class="page">
+            <div class="page-content">
+              <!-- Static Navbar -->
+              <div class="display-flex padding margin justify-content-space-between align-content-center">
+                <div id="log">
+                    <img src="img/logo.png" alt="" />
+                </div>  
+                <div id="menu">
+                    <a class="panel-open" href="#"><ion-icon name="menu" class="black icon-large"></ion-icon></a>
+                </div>
+              </div>
+              
+              <!-- Food List -->
+              <div class="block">
+                <!-- Back to Home: Top Left -->
+              <div class="row">             
+                <div class="col margin-top">
+                  <a class="paragraph accent link back"><ion-icon name="arrow-back"></ion-icon> Back to home</a>
+                </div>
+              </div>
+
+              <!-- Day 1 -->
+              <p class="heading text-align-center">Day 1</p>
+              <img src="img/tunaSandwich.png" width="100%"/>
+              <p class="food-name bold text-align-left">Lunch: Tuna Salad</p>
+              <p class="paragraph text-align-left margin-bottom">
+                  Tuna flakes, Romaine lettuce and, creamy mayonnaise layered in 
+                  between 2 slices of wheat bread. A healthy and heavy lunch that’s 
+                  packed with protein, omega-3 fatty acids, and carbohydrates that’s 
+                  sure to fuel up anyone for a mountain hike!
+              </p>
+        
+                <img src="img/beefSandwich.png" class="margin-top" width="100%"/>
+                <p class="food-name bold text-align-left">Dinner: Roast Beef Sandwich</p>
+                <p class="paragraph text-align-left margin-bottom">
+                  In between two slices of wheat bread are strips of slow roasted beef, 
+                  layered between fresh Romaine lettuce, tomato slices, and topped with 
+                  a smoky barbecue sauce; a hearty meal to revitalize all those worn out 
+                  muscles from the day’s hike!
+                </p>
+
+              <!-- Day 2 -->
+              <p class="heading text-align-center">Day 2</p>
+              
+                <img src="img/eggSandwich.png" class="margin-top" width="100%"/>
+                <p class="food-name bold text-align-left">Breakfast: Bacon & Egg Sandwich</p>
+                <p class="paragraph text-align-left margin-bottom">
+                  No better way to start the morning than with creamy and fluffy 
+                  scrambled eggs infused with rich mayonnaise all in between two buttered and slightly toasted buns.
+                </p>
+
+                <img src="img/riversideRestaurant.png" class="margin-top" width="100%"/>
+                <p class="food-name bold">Lunch: Local Riverside Restaurant</p>
+                <p class="paragraph text-align-left margin-bottom">
+                  End the trip with a relaxing lunch by the river in one of the city’s 
+                  top seafood restaurants!
+                </p>
+                <!-- Back to Home: Bottom Center -->
+                <div class="row margin-top">             
+                  <div class="col text-align-center">
+                    <a class="paragraph accent link back"><ion-icon name="arrow-back"></ion-icon> Back to home</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script
+      type="text/javascript"
+      src="lib/framework7/js/framework7.bundle.min.js"
+    ></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <!-- Ionicons CDN -->
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+  </body>
+</html>

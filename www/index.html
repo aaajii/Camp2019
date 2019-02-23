@@ -9,27 +9,31 @@
     />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- Color theme for statusbar -->
-    <meta name="theme-color" content="#2196f3" />
+    <meta name="theme-color" content="#0FD991" />
     <!-- Your app title -->
-    <title>My App</title>
+    <title>Camp 2019 Invitation</title>
     <!-- Path to Framework7 Library Bundle CSS -->
     <link rel="stylesheet" href="lib/framework7/css/framework7.bundle.min.css"/>
     <!-- Custom CSS files -->
     <link rel="stylesheet" href="css/my-app.css" />
     <link rel="stylesheet" href="css/fonts.css" />
+    <script src="js/mapbox-gl.js"></script>
+    <link rel="stylesheet" href="css/mapbox-gl.css" />
   </head>
   <body>
     <!-- App root element -->
     <div id="app">
       <div class="panel panel-left panel-reveal">
         <div class="block">
-          <p>Left Panel content here</p>
-          <p><a class="panel-close" href="#">Close me</a></p>
-          <p>
-            <a class="panel-open" href="#" data-panel="right"
-              >Open Right Panel</a
-            >
-          </p>
+          <!-- TODO Create routing for panels-->
+          <img src="img/logo.png" alt="" />
+          <p><a href="/" class="panel-close paragraph">Home</a></p>
+          <p><a href="#about" class="paragraph">About</a></p>
+          <p><a href="#committees" class="paragraph">Committee Heads</a></p>
+          <p><a href="#schedule" class="paragraph">Schedule of Activities</a></p>
+          <p><a href="#loc" class="paragraph">Location Map</a></p>
+          <p><a href="#contact" class="paragraph">Contact Us</a></p>
+          <p><a href="/devs/" class="panel-close paragraph">Developers</a></p>
         </div>
       </div>
       <!-- Statusbar overlay -->
@@ -38,40 +42,366 @@
       <!-- Your main view, should have "view-main" class -->
       <div class="view view-main">
         <!-- Initial Page, "data-name" contains page name -->
-        <div data-name="home" class="page">
+        <div data-name="home" id="home" class="page">
           <!-- Top Navbar -->
           <div class="page">
             <div class="page-content">
               <!-- Static Navbar -->
-              <div class="navbar">
-                <div class="navbar-inner">
-                  <div class="left">
-                    <img src="img/logo.png" alt="" />
+              <div class="display-flex padding margin justify-content-space-between align-content-center">
+                  <div id="log">
+                      <img src="img/logo.png" alt="" />
+                  </div>  
+                  <div id="menu">
+                      <a class="panel-open" href=""><ion-icon name="menu" class="black icon-large"></ion-icon></a>
                   </div>
-                  <div class="right">
-                        <a class="panel-open" href="#"><img width="30" src="img/menu.svg" alt=""></a>
-                  </div>
-                </div>
               </div>
+              <!-- LANDING SECTION -->
               <div class="row">
-                    <div class="col-100 tablet-50"><h1 class="heading primary">CAMP2019:
-                            Mountain Climbing
-                            is coming to Davao! </h1>
-                        
-                            <h3 class="subtitle primary">And, you are invited.</h3></div>
-                    <div class="col-100 tablet-50">
-                            <img src="img/landing2.png" width="100%" alt=""></div>
-              </div>
-                <div class="block paragraph">
-                    
-                    <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Itaque quos asperiores ut, odio numquam ab, qui, alias
-                    adipisci in magni reiciendis reprehenderit. Labore esse quae
-                    ut tempore consequatur, reprehenderit similique!
-                    </p>
-                    ...
+                <div class="col-100 tablet-50  ">
+                    <div class="padding-horizontal margin-horizontal">
+                        <h1 class="heading primary no-margin-bottom lh-default">CAMP2019: <br/> Mountain Climbing is coming to Davao! </h1>
+                        <h3 class="subtitle primary">And, you are invited.</h3>
+                        <div class="row">
+                          <div class="col-33"><a href="/rsvp/"> <button class=" button button-fill button-green">Register</button> </a></div>
+                        </div>
+                    </div>
                 </div>
+                <div class="col-100 tablet-50">
+                    <img src="img/landing2.png" width="100%" alt="">
+                </div>
+              </div>
+              <!-- ABOUT SECTION -->
+              <div id="about" class="about margin-vertical padding-vertical">
+                <div class="text-align-center">
+                  <h1 class="subheading primary">About</h1>
+                </div>
+                <div class="block text-align-center">
+                  <p class="paragraph grey">
+                  Camp 2019 is an annual 2-day retreat
+                  where adults gather to participate in fun
+                  outdoor activities with campers from all
+                  around the world. It will be lead by the world -
+                  class master campers that has organised
+                  over 100+ camps in different countries.
+                  And this year, we're coming to Davao City!
+                  </p>
+                </div>
+                <div class="primary block text-align-left display-flex justify-content-space-around">
+                  <div class="lh-small">
+                    <h1 class="heading">50 <br/><span class="paragraph">Participants</span></h1>
+                  </div>
+                  <div class="lh-small">
+                    <h1 class="heading">2 <br/><span class="paragraph">Days</span></h1>
+                  </div>
+                  <div class="lh-small">
+                      <h1 class="heading">1 <br/><span class="paragraph">Moutain</span></h1>
+                  </div>
+                </div>
+                <div class="row margin-top">
+                  <div class="col-25 padding-left-icon text-align-center">
+                    <ion-icon class="icon-small accent" name="pin"></ion-icon>
+                  </div>
+                  <div class="col-75 paragraph primary">
+                    Mt. Talomo, Davao City
+                  </div>
+                </div>
+                <div class="row margin-top">
+                  <div class="col-25 padding-left-icon text-align-center">
+                      <ion-icon class="icon-small accent" name="calendar"></ion-icon>
+                  </div>
+                  <div class="col-75 paragraph primary">
+                      February 23-24, 2019
+                  </div>
+                </div>
+                <div class="row margin-top">
+                  <div class="col-25 padding-left-icon text-align-center">
+                      <ion-icon class="icon-small accent" name="cash"></ion-icon>
+                  </div>
+                  <div class="col-75 paragraph primary">
+                      PHP 5,999.00/person <br/>
+                      <div class="margin-right padding-right">
+                          <span class="subheading primary lh-large">Inclusions: <br/></span>
+                          <p>Roundtrip public transportation from Calinan to Mt. Talomo </p>
+                          <p>Local guide fee </p>
+                          <p>Camp Meals (Breakfast, Lunch, Dinner)</p>
+                          <p>Environmental Fees</p>
+                          <p>DENR Permit to climb</p>
+                          <p>All camping equipment (tent, sleeping bag, earth pad)</p>
+                      </div>
+                  </div>
+                </div>
+              </section>
+              <img src="img/about.png" width="100%" alt="">
+              
+              <!-- COMMITTEES SECTION -->
+              <section id="committees" class="list media-list inset  margin-vertical padding-vertical">
+                <div class="text-align-center">
+                  <h1 class="subheading primary">Committees</h1>
+                </div>
+                  <ul>
+                    <li>
+                      <a href="/peter/" class="item-link item-content">
+                        <div class="item-media"><img src="img/staff/1.jpg"  width="100"/></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class=" primary subheading">Peter Griffin</div>
+                          </div>
+                          <div class="item-subtitle">Camp Leader</div>
+                          <div class="item-text">Peter Griffin has been a camp master for 20 years. More</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/phum/" class="item-link item-content">
+                        <div class="item-media"><img src="img/staff/2.png"/></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="primary subheading">Phum Viphurit</div>
+                          </div>
+                          <div class="item-subtitle">Activities Committee Head</div>
+                          <div class="item-text">Phum is Thailand’s most outstanding Boy Scout of 2019. Phum, together with his team organized last year’s CAMP2018 in Thailand.</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/jake/" class="item-link item-content">
+                        <div class="item-media"><img src="img/staff/3.png" width="100"/></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="primary subheading">Jake Peralta</div>
+                          </div>
+                          <div class="item-subtitle">Safety Committee Head</div>
+                          <div class="item-text">Jake is an experienced camp master for over 5 years. He underwent extensive military training under the Brooklyn Nine-Nine last 2016.</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/kara/" class="item-link item-content">
+                        <div class="item-media"><img src="img/staff/4.png"/></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="primary subheading">Kara Mia</div>
+                          </div>
+                          <div class="item-subtitle">Food Committee Head</div>
+                          <div class="item-text">Kara has been a volunteer camper since CAMP 2015. She has been actively leading women empowerment camp groups all over the world.</div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/amy/" class="item-link item-content">
+                        <div class="item-media"><img src="img/staff/5.png"/></div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="primary subheading">Amy Santiago</div>
+                          </div>
+                          <div class="item-subtitle">Logistics Committee Head</div>
+                          <div class="item-text">Amy Santiago is a Michelin 5-star chef from Mexico. She has worked with notable chefs such as Gordon Ramsey and Mario Batali.</div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </section>
+
+              <section id="schedule" class="schedule_of_activies block margin-vertical padding-vertical">
+                  <div class="text-align-center">
+                      <h1 class="subheading primary">Schedule of Activies</h1>
+                    </div>
+
+                  <div class="block text-align-left primary">
+                    <!-- Day 1 -->
+                    <p class="subheading">Day 1 </p>
+                    <div class="row">
+                      <div class="col-20">
+                        <p class="subheading">5:30AM</p>
+                      </div>
+                      <div class="col-80">
+                        <p class="paragraph">Participants arrive at Calinan</p>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-20">
+                        <p class="subheading">6:00AM</p>
+                      </div>
+                      <div class="col-80">
+                          <p class="paragraph">Arrive at Purok 6, Tamayong</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-20">
+                        <p class="subheading">7:00AM</p>
+                      </div>
+                      <div class="col-80">
+                          <p class="paragraph">Start Trek</p>
+                        </div>
+                    </div>
+                        
+                    <div class="row">
+                      <div class="col-20">
+                        <p class="subheading">8:00AM</p>
+                      </div>
+                      <div class="col-80">
+                          <p class="paragraph">ETA Mt. Sicao, </p>
+                          <p class="paragraph">Register at Datu Sicao</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-20">
+                        <p class="subheading">9:30AM</p>
+                      </div>
+                      <div class="col-80">
+                          <p class="paragraph">Resume Trek</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-20">
+                        <p class="subheading">12:00NN</p>
+                      </div>
+                      <div class="col-80">
+                          <p class="paragraph">Lunch <a href="/food/" class="accent">(Full Meal List)</a> </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-20">
+                        <p class="subheading">5:00PM</p>
+                      </div>
+                      <div class="col-80">
+                          <p class="paragraph">ETA Mt. Talomo Summit</p>
+                        </div>
+                    </div>
+
+                    <div class="row margin-bottom">
+                      <div class="col-20">
+                        <p class="subheading">7:00PM</p>
+                      </div>
+                      <div class="col-80">
+                          <p class="paragraph">Dinner/Socials</p>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 -->
+                    <p class="subheading margin-top">Day 2 </p>
+                    <div class="row">
+                      <div class="col-20">
+                        <p class="subheading">5:00AM</p>
+                      </div>
+                      <div class="col-80">
+                          <p class="paragraph">Wake up</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-20">
+                        <p class="subheading">6:00AM</p>
+                      </div>
+                      <div class="col-80">
+                          <p class="paragraph">Sunrise/Breakfast</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-20">
+                        <p class="subheading">8:00AM</p>
+                      </div>
+                      <div class="col-80">
+                          <p class="paragraph">Break camp</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-20">
+                        <p class="subheading">8:30AM</p>
+                      </div>
+                      <div class="col-80">
+                          <p class="paragraph">Start descent</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-20">
+                        <p class="subheading">12:00NN</p>
+                      </div>
+                      <div class="col-80">
+                          <p class="paragraph">Lunch/Socials</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-20">
+                        <p class="subheading">4:00PM</p>
+                      </div>
+                      <div class="col-80">
+                          <p class="paragraph">ETA Sitio Utan, Tamayong</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-20">
+                        <p class="subheading">5:00PM</p>
+                      </div>
+                      <div class="col-80">
+                          <p class="paragraph">Home!</p>
+                        </div>
+                    </div>
+
+                    <!-- RSVP Now! Button -->
+                    <div class="row margin-top">
+                      <div class="col-33">
+                        <a href="/rsvp/"> <button class=" button button-fill button-green">Register</button> </a>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+              <section class="margin-vertical padding-vertical" id="loc">
+                <div class="text-align-center">
+                  <h1 class="subheading primary">Location Map</h1>
+                </div>
+                <div id="map" class="margin-top" style="width:100%;"></div>
+              </section>
+              </div>
+
+              <!-- CONTACT US -->
+              <div id="contact">
+                <div class="text-align-center"><h1 class="subheading primary">Contact Us</h1></div>
+                <div class="row margin-top">
+                  <div class="col-25 padding-left text-align-center">
+                    <ion-icon class="icon-small accent" name="logo-facebook"></ion-icon>
+                  </div>
+                  <div class="col-75 paragraph primary">
+                    /CAMP2019
+                  </div>
+                </div>
+                <div class="row margin-top">
+                  <div class="col-25 padding-left text-align-center">
+                      <ion-icon class="icon-small accent" name="logo-twitter"></ion-icon>
+                  </div>
+                  <div class="col-75 paragraph primary">
+                      @CAMP2019
+                  </div>
+                </div>
+                <div class="row margin-top">
+                  <div class="col-25 padding-left text-align-center">
+                      <ion-icon class="icon-small accent" name="globe"></ion-icon>
+                  </div>
+                  <div class="col-75 paragraph primary">
+                      www.camp2019.com
+                  </div>
+                </div>
+                <div class="row margin-top">
+                  <div class="col-25 padding-left text-align-center">
+                      <ion-icon class="icon-small accent" name="mail"></ion-icon>
+                  </div>
+                  <div class="col-75 paragraph primary">
+                      mail@camp2019.com
+                  </div>
+                </div>
+                <div class="margin-top padding-top padding-left"><h1 class="subheading grey">CAMP 2019 <br/>All Rights Reserved</h1></div>
+              </div>
             </div>
           </div>
         </div>
@@ -82,7 +412,16 @@
       type="text/javascript"
       src="lib/framework7/js/framework7.bundle.min.js"
     ></script>
+    <!-- Ionicons CDN -->
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous">
+      </script>
+    <!-- Wait Function -->
+    <script src="js/jquery.wait.js"></script>
     <!-- Path to your app js-->
+    <script type="text/javascript" src="js/mapbox.js"></script>
     <script type="text/javascript" src="js/my-app.js"></script>
   </body>
 </html>

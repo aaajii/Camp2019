@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#0FD991" />
+    <!-- Your app title -->
+    <title>Camp 2019 Invitation</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link
+      rel="stylesheet"
+      href="lib/framework7/css/framework7.bundle.min.css"
+    />
+    <!-- Custom CSS files -->
+    <link rel="stylesheet" href="css/my-app.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/registration.css" />
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <div class="panel panel-left panel-reveal">
+        <div class="block">
+          <!-- TODO Create routing for panels-->
+          <p><a class="panel-close" href="#">Close me</a></p>
+          <p><a href="/" class="panel-close">Home</a></p>
+          <p><a href="#about">About</a></p>
+          <p><a href="/">Committee Heads</a></p>
+          <p><a href="/">Schedule of Activities</a></p>
+          <p><a href="/">Location Map</a></p>
+          <p><a href="/">Contact Us</a></p>
+        </div>
+      </div>
+      <!-- Statusbar overlay -->
+      <div class="statusbar"></div>
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" id="home" class="page">
+          <!-- Top Navbar -->
+          <div class="page">
+            <div class="page-content">
+              <!-- Static Navbar -->
+              <div class="display-flex padding margin justify-content-space-between align-content-center">
+                <div id="log">
+                    <img src="img/logo.png" alt="" />
+                </div>  
+                <div id="menu">
+                    <a class="panel-open" href=""><ion-icon name="menu" class="black icon-large"></ion-icon></a>
+                </div>
+            </div>
+            <div class="block">
+                <h3 class="subheading primary text-align-center">Registration</h3>
+                <div class="block">
+                    <p class="text-align-center grey paragraph">
+                        You’re now good to go. Final reminders will be sent to your email address. See you on February 23, 2019!
+                    </p>
+                </div>
+                <img src="img/success.png" width="100%" alt="">
+                <a href="/">
+                  <div class="text-align-center accent paragraph"><ion-icon name="arrow-back"></ion-icon>Back to home</div>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7/js/framework7.bundle.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>
